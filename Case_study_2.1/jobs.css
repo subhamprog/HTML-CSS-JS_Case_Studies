@@ -1,0 +1,12 @@
+body{
+    background-color: azure;
+}
+
+h1 {
+    background-color: rgb(96, 230, 78);
+    text-align: center;
+}
+
+hr{
+    color: blueviolet;
+}

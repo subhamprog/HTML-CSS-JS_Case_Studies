@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jobs.css">
+    <title>Jobs</title>
+</head>
+<body>
+<h1>Enter job data</h1>
+<hr>
+<br>
+<br>
+<br>
+<div id="jform">
+    <form action="" onsubmit="myfunction()">
+        <label for="job" required>Title<font color="red">*</font> : </label>
+        <input type="text" id="title" name="title" pattern="[A-Za-z]" placeholder="Enter job title">
+        <br>
+        <br>
+        <label for="type">Type<font color="red">*</font> : </label>
+        <select name="type" id="type">
+            <option value="Select">Select Type</option>
+            <option value="trainee">Trainee</option>
+            <option value="analyst">Analyst</option>
+        </select>
+        <br>
+        <br>
+        <label for="department" >Department<font color="red">*</font> : </label>
+        <select  id="department">
+            <option value="Select">Select Department</option>
+            <option value="HR">HR</option>
+            <option value="Sales">Sales</option>
+            <option value="Dev">Dev</option>
+        </select>
+        <br>
+        <br>
+        <label for="country">Country<font color="red">*</font> : </label>
+        <select id="country">
+            <option value="Select">Select Country</option>
+            <option value="HR">India</option>
+            <option value="Sales">North America</option>
+            <option value="Dev">Japan</option>
+        </select>
+        <br>
+        <br>
+        <label for="description">Description<font color="red">*</font> : </label>
+        <textarea id="description" name="description" rows="4" cols="50" pattern="[A-Za-z0-9]" placeholder="Enter the Description....."></textarea>
+        <br>
+        <br>
+        <label for="opening">Opening Date<font color="red">*</font> : </label>
+        <input type="date" name="date" id="date">
+        <br>
+        <br>
+        <input type="submit" value="Submit" onclick="checkDate()">
+    </form>
+</div>
+<script>
+    function myfunction()
+    {
+        if(document.getElementById("title").value =="" || document.getElementById("type").value=="Select" ||document.getElementById("department").value=="Select" || document.getElementById("country").value=="Select" || document.getElementById("description").value=="" || document.getElementById("date").value=="")
+            {
+                alert("Please fill all the fields.");
+                return false;
+            }
+    }
+    function checkDate()
+    {
+        var todayDate = new Date(); //Today Date    
+        var dateOne = new Date(document.getElementById("date").value);    
+        if (todayDate.getTime() < dateOne.getTime()) {    
+           alert("Enter correct Date please.");
+        }    
+    }
+</script>
+</body>
+</html>
