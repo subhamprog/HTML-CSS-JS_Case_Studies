@@ -1,0 +1,16 @@
+.header {
+    padding: 45px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+  }
+
+  input[type=text] , select , textarea , input[type=file] {
+      width: 15%;
+      border-color: blue;
+  }
+  
+  input[type=submit] {
+      color: coral;
+  }

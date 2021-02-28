@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apply_job.css">
+    <script src="apply_job.js"></script> 
+    <title>Apply for Jobs</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Apply for Jobs</h1>
+        <p>Enter Details</p>
+    </div>
+    <br>
+    <br>
+    <div class="ajform">
+        <form action="" onsubmit="validate()">
+            <div class="group">
+                <tr>
+                    <td><label for="fname">First Name<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="fname" name="fname"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="lname">Last Name<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="lname" name="lname"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="email">E-mail<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="phone">Phone<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="phone" name="phone" pattern="[7-9]{1}[0-9]{9}"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="address">Address<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="address" name="address"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="city">City<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="city" name="city"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="state">State<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="state" name="state"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="zip">Zip<font color="red">*</font> : </label></td>
+                    <td><input type="text" id="zip" name="zip"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="country">Country<font color="red">*</font> : </label></td>
+                    <td>
+                        <select id="country">
+                            <option value="select">Select</option>
+                            <option value="india">India</option>
+                            <option value="japan">Japan</option>
+                            <option value="italy">Italy</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                    </td>
+                </tr>
+            </div>
+            
+            <div class="group">
+                <tr>
+                    <td><label for="edulevel">Education Level<font color="red">*</font> : </label></td>
+                    <td>
+                        <select id="edulevel">
+                            <option value="select">Select</option>
+                            <option value="graduate">Graduate</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="masters">Masters</option>
+                        </select>
+                    </td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="edutype">Education Type<font color="red">*</font> : </label></td>
+                    <td>
+                        <select id="edutype">
+                            <option value="select">Select</option>
+                            <option value="type1">Type 1</option>
+                            <option value="type 2">Type 2</option>
+                            <option value="type3">Type 3</option>
+                        </select>
+                    </td>
+                </tr>
+            </div>
+            
+            <div class="group">
+                <tr>
+                    <td><label for="file">Resume<font color="red">*</font> : </label></td>
+                    <td><input type="file" id="resume" name="resume"></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="cover">Cover Letter : </label></td>
+                    <td><textarea id="cover" rows="4" cols="50" placeholder="Enter cover letter text"></textarea></td>
+                </tr>
+            </div>
+
+            <div class="group">
+                <tr>
+                    <td><label for="empstatus">Are you employed ? : </label></td>
+                    <td><input type="checkbox" id="yes" name="yes" value="yes" onchange="checkStatus(this)"></td>
+                </tr>
+            </div>
+
+            <div id="groupnew"></div>
+
+            <div class="group"><tr>
+                <td><label for="jobs">Jobs you wan to apply :</label></td>
+                <td><select name="jobs" id="jobs" multiple>
+                    <option value="select">Select</option>
+                    <option value="programmer">Programmer</option>
+                    <option value="tester">Tester</option>
+                    <option value="designer">Designer</option>
+                  </select></td></tr>
+            </div>
+
+            <div class="button">
+                <tr>
+                    <td><input type="submit" id="submit" value="Submit" onclick="">
+                </tr>
+            </div>
+
+        </form>
+    </div>
+     
+</body>
+</html>
